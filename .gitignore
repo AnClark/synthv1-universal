@@ -1,0 +1,5 @@
+# CMake build directories
+build*/**
+
+# Cache
+.cache

@@ -1,0 +1,9 @@
+#ifndef CONFIG_DPF_H
+#define CONFIG_DPF_H
+
+/* Define to the version of this package. */
+#define CONFIG_VERSION_MAJOR @CONFIG_VERSION_MAJOR@
+#define CONFIG_VERSION_MINOR @CONFIG_VERSION_MINOR@
+#define CONFIG_VERSION_PATCH @CONFIG_VERSION_PATCH@
+
+#endif // CONFIG_DPF_H
