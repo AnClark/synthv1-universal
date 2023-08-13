@@ -1,0 +1,6 @@
+[submodule "dpf"]
+	path = dpf
+	url = https://github.com/DISTRHO/DPF.git
+[submodule "src"]
+	path = src
+	url = https://github.com/rncbc/synthv1.git
