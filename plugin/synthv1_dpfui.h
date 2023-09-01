@@ -28,6 +28,7 @@
 
 // Forward decls.
 class synthv1_dpf;
+class QMainWindow;
 
 // -----------------------------------------------------------------------------------------------------------
 // SynthV1PluginUI - DPF Plugin UI interface.
@@ -36,9 +37,12 @@ START_NAMESPACE_DISTRHO
 
 class SynthV1PluginUI : public UI {
 
-	std::unique_ptr<synthv1widget_dpf> fWidget;
+	std::unique_ptr<QMainWindow> fWindow;	// Background window
+	std::unique_ptr<synthv1widget_dpf> fWidget;	// The main UI part
 	WId fWinId;
 	WId fParent;
+
+	QSize m_widgetSize;	// Target Qt UI size with scale factor considered
 
 	// ----------------------------------------------------------------------------------------------------------------
 
