@@ -137,16 +137,16 @@ void SynthV1PluginUI::visibilityChanged(const bool visible)
 {
 	d_stdout("visibilityChanged %d", visible);
 
-	DISTRHO_SAFE_ASSERT_RETURN(fWidget != 0,);
+	DISTRHO_SAFE_ASSERT_RETURN(fWindow != nullptr,);
 
 	if (visible)
 	{
-		fWidget->show();
-		fWidget->raise();
-		fWidget->activateWindow();
+		fWindow->show();
+		fWindow->raise();
+		fWindow->activateWindow();
 	}
 	else
-		fWidget->hide();
+		fWindow->hide();
 }
 
 void SynthV1PluginUI::uiIdle()
