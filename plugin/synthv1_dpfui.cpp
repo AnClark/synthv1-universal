@@ -89,6 +89,7 @@ SynthV1PluginUI::~SynthV1PluginUI()
 */
 void SynthV1PluginUI::parameterChanged(uint32_t index, float value)
 {
+	DISTRHO_SAFE_ASSERT_RETURN(fWidget != nullptr,);
 	fWidget->setUIParamValue(synthv1::ParamIndex(index), value);
 }
 
@@ -121,7 +122,7 @@ void SynthV1PluginUI::titleChanged(const char* const title)
 {
 	d_stdout("titleChanged %s", title);
 
-	DISTRHO_SAFE_ASSERT_RETURN(fWidget != 0,);
+	DISTRHO_SAFE_ASSERT_RETURN(fWidget != nullptr,);
 	fWidget->setWindowTitle(QString(title));
 }
 
@@ -129,7 +130,7 @@ void SynthV1PluginUI::transientParentWindowChanged(const uintptr_t winId)
 {
 	d_stdout("transientParentWindowChanged %lu", winId);
 
-	DISTRHO_SAFE_ASSERT_RETURN(fWidget != 0,);
+	DISTRHO_SAFE_ASSERT_RETURN(fWidget != nullptr,);
 	// NOTICE: Seems not implemented by Qt
 }
 
@@ -153,7 +154,7 @@ void SynthV1PluginUI::uiIdle()
 {
 	// d_stdout("uiIdle");
 
-	if (fWidget)
+	if (fWidget != nullptr)
 	{
 		QApplication::processEvents();
 		return;
