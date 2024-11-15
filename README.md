@@ -1,3 +1,11 @@
+> **WARNING:**
+>
+> This project will not be updated anymore, since:
+> - Qt Widgets is not a good toolkit to develop cross-platform plugin UI with DPF. I faced a bunch of compatibility issues with DPF's external UI.
+> - Newer Qt versions (>= 6.8) becomes harder for me to build static version.
+>
+> Now I'm rewriting a new generation of UI with Dear ImGui. See: [synthv1-xt](https://github.com/AnClark/synthv1-xt).
+
 # synthv1-universal - cross-platform port of synthv1
 
 synthv1 is an old-school 4-oscillator subtractive polyphonic synthesizer with stereo fx. Written by [rncbc](https://github.com/rncbc) (a.k.a. Rui Nuno Capela).
